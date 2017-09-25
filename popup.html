@@ -1,0 +1,41 @@
+<!doctype html>
+<head>
+  <link href="styles/angular-material.min.css" rel="stylesheet" type="text/css">
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="initial-scale=1" />
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-animate.min.js"></script>
+  <script src="scripts/angular-aria.min.js"></script>
+  <script src="scripts/angular-material.min.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body ng-csp ng-app="mbo-popup" ng-controller="AppController">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Make Better Online</h2>
+    </div>
+  </md-toolbar>
+  <md-content flex layout-padding>
+    <h3>I don't want to see following type of content online</h3>
+    <md-list>
+      <md-list-item>
+        <p>Disturbing</p>
+        <md-checkbox class="md-secondary" ng-model="filter.disturbing" ng-click="selectPreferance()"></md-checkbox>
+      </md-list-item>
+      <md-list-item>
+        <p>Violence</p>
+        <md-checkbox class="md-secondary" ng-model="filter.violence" ng-click="selectPreferance()"></md-checkbox>
+      </md-list-item>
+      <md-list-item>
+        <p>Offensive</p>
+        <md-checkbox class="md-secondary" ng-model="filter.offensive" ng-click="selectPreferance()"></md-checkbox>
+      </md-list-item>
+      <md-list-item>
+        <p>Explicit content</p>
+        <md-checkbox class="md-secondary" ng-model="filter.explicit" ng-click="selectPreferance()"></md-checkbox>
+      </md-list-item>
+    </md-list>
+    <p>This will include HTTP header 'Content-Filter' with the above selected items in every request. Server can filer accordingly before sending the response.</p> 
+    <center>see more at <a target="_blank" href="https://github.com/">github.com</a></center>
+  </md-content>
+</body>
