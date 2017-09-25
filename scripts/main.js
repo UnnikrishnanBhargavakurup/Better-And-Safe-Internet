@@ -11,13 +11,14 @@ angular.module('mbo-popup', ['ngMaterial'])
   };
 
   chrome.storage.sync.get("filter", function(data) {
-    console.log(data);
-    $scope.filter = data.filter || {
-      "disturbing": false,
-      "violence": false,
-      "offensive": false,
-      "explicit": false
-    };
+    $scope.$apply(function () {
+      $scope.filter = data.filter || {
+        "disturbing": false,
+        "violence": false,
+        "offensive": false,
+        "explicit": false
+      };
+    });
   });
 
   $scope.selectPreferance = function() {
@@ -26,9 +27,6 @@ angular.module('mbo-popup', ['ngMaterial'])
       if (chrome.runtime.error) {
         console.log("Runtime error.");
       }
-      chrome.storage.sync.get(null, function(data) {
-        console.log(data);
-      });
-    });      
+    });  
   };
 });
