@@ -36,3 +36,5 @@ We can also include more information in this header if we add the values as an i
 ## What this plug-in do?
 
 This plug in is concept for implementing the browser preference. We can implement this feature same as this plugin in browser preference.
+
+![Alt text](/images/Screen_Shot.png?raw=true "Better And Safe Internet")
