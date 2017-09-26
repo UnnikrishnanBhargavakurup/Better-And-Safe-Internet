@@ -20,22 +20,26 @@
     <md-list>
       <md-list-item>
         <p>Disturbing</p>
-        <md-checkbox class="md-secondary" ng-model="filter.disturbing" ng-click="selectPreferance()"></md-checkbox>
+        <md-checkbox class="md-secondary" ng-model="filter.disturbing" ng-change="selectPreferance()"></md-checkbox>
       </md-list-item>
       <md-list-item>
         <p>Violence</p>
-        <md-checkbox class="md-secondary" ng-model="filter.violence" ng-click="selectPreferance()"></md-checkbox>
+        <md-checkbox class="md-secondary" ng-model="filter.violence" ng-change="selectPreferance()"></md-checkbox>
       </md-list-item>
       <md-list-item>
         <p>Offensive</p>
-        <md-checkbox class="md-secondary" ng-model="filter.offensive" ng-click="selectPreferance()"></md-checkbox>
+        <md-checkbox class="md-secondary" ng-model="filter.offensive" ng-change="selectPreferance()"></md-checkbox>
       </md-list-item>
       <md-list-item>
         <p>Explicit content</p>
-        <md-checkbox class="md-secondary" ng-model="filter.explicit" ng-click="selectPreferance()"></md-checkbox>
+        <md-checkbox class="md-secondary" ng-model="filter.explicit" ng-change="selectPreferance()"></md-checkbox>
+      </md-list-item>
+      <md-list-item>
+        <p>Desktop notifications</p>
+        <md-checkbox class="md-secondary" ng-model="filter.notification" ng-change="selectPreferance()"></md-checkbox>
       </md-list-item>
     </md-list>
     <p>This will include HTTP header 'Content-Filter' with the above selected items in every request. Server can filer accordingly before sending the response.</p> 
-    <center>see more at <a target="_blank" href="https://github.com/">github.com</a></center>
+    <center>see more at <a target="_blank" href="https://github.com/UnnikrishnanBhargavakurup/Better-And-Safe-Internet">github.com</a></center>
   </md-content>
 </body>

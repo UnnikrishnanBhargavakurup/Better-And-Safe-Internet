@@ -7,7 +7,8 @@ angular.module('mbo-popup', ['ngMaterial'])
     "disturbing": false,
     "violence": false,
     "offensive": false,
-    "explicit": false
+    "explicit": false,
+    "notification" : false
   };
 
   chrome.storage.sync.get("filter", function(data) {
@@ -16,13 +17,13 @@ angular.module('mbo-popup', ['ngMaterial'])
         "disturbing": false,
         "violence": false,
         "offensive": false,
-        "explicit": false
+        "explicit": false,
+        "notification" : false
       };
     });
   });
 
   $scope.selectPreferance = function() {
-    console.log({"filter" : $scope.filter});
     chrome.storage.sync.set({"filter" : $scope.filter}, function() {
       if (chrome.runtime.error) {
         console.log("Runtime error.");
